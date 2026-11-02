@@ -12,7 +12,4 @@ cp "$here/UPDATE.md" "$home/UPDATE.md"
 sed "s#/home/aswin/.local/bin#$bin#" "$here/bin/aizen" > "$bin/aizen"
 chmod +x "$bin/aizen"
 hermes config set display.skin fryhite
-# rename the desktop launcher's hover text (file only exists after `hermes desktop` installs it)
-desk="${DESKTOP_FILE:-$HOME/.local/share/applications/com.nousresearch.hermes.desktop}"
-[ -f "$desk" ] && sed -i 's/^Name=Hermes$/Name=Aizen/; s/^GenericName=Hermes Desktop/GenericName=Aizen Desktop/; s/^Comment=Launch Hermes Desktop/Comment=Launch Aizen Desktop/' "$desk"
 echo "done: skin fryhite active, 'aizen' installed in $bin (make sure it is on PATH)"
