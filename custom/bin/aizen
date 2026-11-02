@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /home/aswin/.local/bin/hermes "$@"
